@@ -20,12 +20,9 @@ def products():
     return render_template("products.html")
 
 @app.route('/product_id')
-def products():
+def product():
     return render_template("product.html", product_id=product_id)
 
 @app.route('/about')
-def extract():
+def about():
     return render_template("about.html")
-
-#Dorobić block content do każdej strony
-#Zrobić header i footer w base.html, zgodnie z wymaganiami
