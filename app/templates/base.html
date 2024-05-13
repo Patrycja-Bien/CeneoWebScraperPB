@@ -10,11 +10,10 @@
     <header>
         <h1><u>Ceneo.pl Scraper</u></h1>
         <nav>
-            <button><a href="index">STRONA GŁÓWNA</a></button>
-            <button><a href="extract">EKSTRAKCJA</a></button>
-            <button><a href="products">LISTA PRODUKTÓW</a></button>
-            <button><a href="product">PRODUKT</a></button>
-            <button><a href="about">O AUTORCE</a></button>
+            <button><a href="{{ url_for('index')}}">STRONA GŁÓWNA</a></button>
+            <button><a href="{{ url_for('extract')}}">EKSTRAKCJA</a></button>
+            <button><a href="{{ url_for('products')}}">LISTA PRODUKTÓW</a></button>
+            <button><a href="{{ url_for('about')}}">O AUTORCE</a></button>
         </nav>
     </header>
     <section>
