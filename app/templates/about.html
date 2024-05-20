@@ -1,5 +1,40 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p>To jest strona o autorce</p>
+    <div class="container">
+        <div class="col">
+            <h3>To jest strona o autorce</h3>
+            <h3 class="n">Patrycja Bień</h3>
+            <ul>
+                <li>Absolwentka Filmoznawstwa i wiedzy o nowych mediach na Uniwersytecie Jagiellońskim</li>
+                <li>Szczególne zainteresowanie gatunkiem grozy i sztukami adaptacji oraz animacji</li>
+                <li>Licencjat pod tytułem <em>Źródła sukcesu adaptacyjnego prozy Stephena Kinga</em></li>
+                <li>Aktywna nauka projektowania gier komputerowych za pomocą programu Godot</li>
+            </ul>
+            <h3>Mój pies Luna &#8594;</h3>
+            <ul>
+                <li>Golden Retriever</li>
+                <li>Maść kremowa</li>
+                <li>Lat 7</li>
+                <li>Lubi:</li>
+                    <ul class="inn">
+                        <li>Błoto</li>
+                        <li>Spacery</li>
+                        <li>Jedzenie</li>
+                        <li>Rozszarpywać zabawki</li>
+                        <li>Spać na kanapie</li>
+                    </ul>
+                <li>Nie lubi:</li>
+                    <ul class="inn">
+                        <li>Kąpieli</li>
+                        <li>Zakrapiania uszu płukanką</li>
+                        <li>Wstawania rano</li>
+                        <li>Czekania na jedzenie</li>
+                    </ul>
+            </ul>
+        </div>
+        <div class="col">
+        <img class = "luna" src="{{url_for('static', filename='luna.jpg')}}"/>
+        </div>
+        </div>
 {% endblock %}

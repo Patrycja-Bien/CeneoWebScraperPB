@@ -9,7 +9,14 @@ h1 {
     font-size: 48px;
     background-color: beige;
     padding: 2%;
-}    
+}
+
+h3 {
+    color: #f5941d;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 48px;
+}
 
 nav {
     padding: 2%;
@@ -66,4 +73,97 @@ footer {
     bottom: 0;
     right: 0;
     width: 100%;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #abd182;
+    color: beige;
+    border-style: solid;
+    border-color: #f5941d;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: fit-content;
+  }
+  
+.closebtn {
+    margin-left: 15px;
+    color: beige;
+    font-weight: bold;
+    float: right;
+    font-size: 40px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+.closebtn:hover {
+    color: #f5941d;
+  }
+
+.luna {
+    position: absolute;
+    right: 0;
+    padding: 40px;
+    max-height: 150%;
+  }
+
+.container {
+    display: flex;
+}
+.col {
+    flex: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.n {
+    color:#abd182;
+}
+
+.col ul {
+    list-style-type: circle;
+    text-align: justify;
+}
+
+.inn li {
+    list-style-type: square;
+    padding-bottom: 5px;
+    text-align: justify;
+}
+
+
+.ex label {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ex input {
+    width: 20%;
+    font-size: 32px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #96ba70;
+    background-color: beige;
+    border-color: #96ba70;
+    border-width: 5px;
+}
+
+
+.ex button {
+    text-align: center;
+    font-size: 20px;
+    background-color: #abd182;
+    color: beige;
+    border: solid;
+    border-color: #f5941d;
+    padding: 5px;
+}
+
+.ex button:hover {
+    background-color: #abd182;
+    color: #f5941d;
+    cursor: pointer;
 }

@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Ekstrakcja opinii</h2>
-    <form action="{{ url_for('extract')}}" method="POST">
-        <label for="product_id">Kod produktu:</label><br>
-        <input type="text" id="product_id" name="product_id"><br>
-        <button type="submit">Pobierz opinie</button>
+    <h3>Ekstrakcja opinii</h3>
+    <div>
+        <form class = "ex" action="{{ url_for('extract')}}" method="POST">
+            <label for="product_id">Kod produktu:</label><br>
+            <input type="text" id="product_id" name="product_id"><br>
+            <button type="submit">Pobierz opinie</button>
+    </div>   
     </form>
+    {% if error is defined %}
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Uwaga! {{error}}</strong>
+      </div>
+    {% endif %}
 {% endblock %}
