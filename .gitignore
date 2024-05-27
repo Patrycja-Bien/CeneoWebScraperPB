@@ -161,3 +161,4 @@ cython_debug/
 
 # APP
 app/opinions/
+app/products/
