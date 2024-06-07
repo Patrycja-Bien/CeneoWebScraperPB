@@ -2,5 +2,23 @@
 
 {% block content %}
 <h3>To jest strona z produktami</h3>
-<p>{{products}}</p>
+    {% for product in products %}
+    <div class="frame">
+    <div class="pro-div">
+    <a class="pro-div1" href="https://www.ceneo.pl/{{product.opinions_id}}">{{product.product_name}}</a>
+    <table class="protable">
+    <tr><th colspan="2">Statystyki</th></tr>
+    <tr><td>Liczba opinii:</td><td>{{product.opinions_count}}</td></tr>
+    <tr><td>Liczba opinii pozytywnych:</td><td>{{product.pros_count}}</td></tr>
+    <tr><td>Liczba opinii negatywnych:</td><td>{{product.cons_count}}</td></tr>
+    <tr><td>Średnia ocena:</td><td>{{product.average_stars}}</td></tr>
+    </table>
+    </div>
+    <div class="but-div">
+    <button class="b1"><a href="{{url_for('download_json', product_id=product_id)}}">JSON</a></button>  
+    <button class="b1"><a href="{{url_for('download_csv', product_id=product_id)}}">CSV</a></button>
+    <button class="b1"><a href="{{url_for('download_xlsx', product_id=product_id)}}">XLSX</a></button>
+    </div>
+    </div>
+    {% endfor %}
 {% endblock %}

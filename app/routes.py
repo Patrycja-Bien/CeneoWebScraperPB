@@ -82,6 +82,10 @@ def product(product_id):
 def about():
     return render_template("about.html")
 
+@app.route('/charts/<product_id>')
+def charts(product_id):
+    return render_template("charts.html", product_id=product_id)
+
 @app.route('/product/download_json/<product_id>')
 def download_json(product_id):
     return send_file(f"opinions/{product_id}.json", "text/json", as_attachment = True)
@@ -95,9 +99,10 @@ def download_csv(product_id):
 
 @app.route('/product/download_xlsx/<product_id>')
 def download_xlsx(product_id):
-    pass
-    # opinions = pd.read_json(f"app/opinions/{product_id}.json")
-    # opinions.stars = opinions.stars.apply(lambda s: "'"+s)
-    # buffer = io.BytesIO(opinions.to_csv(sep =";",decimal =",", index = False).encode())
-    # return send_file(buffer, "text/csv", as_attachment = True, download_name = f"{product_id}.csv")
+    opinions = pd.read_json(f"app/data/opinions/{product_id}.json")
+    buffer = io.BytesIO()
+    with pd.ExcelWriter(buffer) as writer:
+        opinions.to_excel(writer, index=False)
+    buffer.seek(0)
+    return send_file(buffer, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", as_attachment=True, download_name=f"{product_id}.xlsx")
 

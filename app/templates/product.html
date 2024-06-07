@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h3>To jest strona produktu {{product_id}}</h3>
+    <h3>To jest strona produktu o ID {{product_id}}</h3>
+    <div class="probuts">
+        <button class="b1"><a href="{{url_for('download_json', product_id=product_id)}}">JSON</a></button>
+        <button class="b1"><a href="{{url_for('download_csv', product_id=product_id)}}">CSV</a></button>
+        <button class="b1"><a href="{{url_for('download_xlsx', product_id=product_id)}}">XLSX</a></button>
+        <button class="b1"><a href="{{url_for('charts', product_id=product_id)}}">Wykresy</a></button>
+    </div>
 {% endblock %}
