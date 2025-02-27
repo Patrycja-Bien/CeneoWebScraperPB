@@ -6,7 +6,7 @@ CeneoWebScraperPB is a Flask-based web application that scrapes product reviews 
 ✅ Displays extracted data in a user-friendly web interface
 ✅ Saves data in JSON/CSV format for further analysis
 ✅ Handles pagination to fetch multiple reviews
-✅ Filters verified purchases
+✅ Displays data in charts
 
 ## Technologies Used
 Python & Flask (backend & web app)
